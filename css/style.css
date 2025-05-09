@@ -1,36 +1,80 @@
+@import url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css');
+
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
+  font-family: 'GmarketSans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #333;
+  background-color: #fff;
+  color: #111;
 }
+
 header {
-  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #e53935;
   color: white;
-  padding: 20px 0;
-  text-align: center;
 }
-nav ul {
-  list-style: none;
-  padding: 0;
+
+header h1 {
+  font-size: 24px;
 }
-nav ul li {
-  display: inline;
+
+nav a {
   margin: 0 15px;
-}
-nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
-section {
-  padding: 20px;
-}
-footer {
-  background-color: #f4f4f4;
-  color: #555;
+
+.hero {
   text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 60px 20px;
+  background-image: url('assets/food1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.menu-item h4 {
+  margin: 10px 0 5px;
+}
+
+.menu-item p {
+  margin: 0;
+}
+
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
