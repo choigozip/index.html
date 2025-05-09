@@ -25,43 +25,26 @@ header {
   font-weight: bold;
 }
 
-.navbar {
-  position: relative;
-}
-
-.toggle-button {
+.menu-toggle {
   display: none;
+  font-size: 28px;
   background: none;
   border: none;
   color: white;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
 }
 
 .nav-links a {
-  color: white;
+  margin-left: 20px;
   text-decoration: none;
+  color: white;
   font-weight: bold;
 }
 
 .hero {
-  background: url('../assets/interior.jpg') no-repeat center center / cover;
+  background-color: #222;
   color: white;
   text-align: center;
   padding: 100px 20px;
-  background-blend-mode: darken;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.hero h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
 .section {
@@ -115,23 +98,27 @@ footer {
   font-size: 14px;
 }
 
-/* 모바일 반응형 */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
-    gap: 10px;
     background-color: #111;
     position: absolute;
     top: 60px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 8px;
+    left: 0;
+    width: 100%;
   }
-  .nav-links.active {
+
+  .nav-links.open {
     display: flex;
   }
-  .toggle-button {
-    display: block;
+
+  .nav-links a {
+    margin: 15px 0;
+    text-align: center;
   }
 }
