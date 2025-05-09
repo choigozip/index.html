@@ -1,48 +1,85 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>최고집 | 냉동삼겹살 전문점</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>최고집 - 냉동삼겹살 전문점</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>최고집</h1>
     <nav>
-      <ul>
-        <li><a href="#home">홈</a></li>
-        <li><a href="#menu">메뉴</a></li>
-        <li><a href="#about">브랜드 소개</a></li>
-        <li><a href="#contact">가맹문의</a></li>
-      </ul>
+      <a href="#about">소개</a>
+      <a href="#menu">메뉴</a>
+      <a href="#contact">문의</a>
     </nav>
   </header>
-  <section id="home">
-    <h2>냉동삼겹살의 정석, 최고집</h2>
-    <p>신선함과 정직함으로 만든 한 끼의 가치</p>
+
+  <section class="hero">
+    <h2>정직한 재료, 합리적인 가격</h2>
+    <p>냉동삼겹살의 진수, 지금 만나보세요!</p>
   </section>
-  <section id="menu">
-    <h2>메뉴</h2>
-    <ul>
-      <li>냉동삼겹살 - 12,000원</li>
-      <li>돼지껍데기 - 10,000원</li>
-      <li>고추장찌개 - 6,000원</li>
-      <li>짜파게티 - 5,000원</li>
-      <li>계란찜 - 4,000원</li>
-      <li>볶음밥 - 4,000원</li>
-      <li>공기밥 - 1,000원</li>
-    </ul>
+
+  <section class="section" id="about">
+    <h3>브랜드 소개</h3>
+    <p>
+      최고집은 정직한 재료와 손맛으로 한 끼를 특별하게 만드는 냉동삼겹살 전문점입니다. 급속 냉동 기술로 신선도를 유지하고, 누구나 부담 없이 즐길 수 있도록 합리적인 가격을 유지합니다.
+    </p>
   </section>
-  <section id="about">
-    <h2>브랜드 소개</h2>
-    <p>최고집은 정직한 재료, 고집스러운 손맛, 그리고 고객과의 신뢰를 가장 소중히 생각합니다.</p>
+
+  <section class="section" id="menu">
+    <h3>메뉴</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="assets/food8.jpg" alt="냉동삼겹살" />
+        <h4>냉동삼겹살</h4>
+        <p>12,000원</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food7.jpg" alt="돼지껍데기" />
+        <h4>돼지껍데기</h4>
+        <p>10,000원</p>
+      </div>
+       <div class="menu-item">
+        <img src="assets/food3.jpg" alt="고추장찌개" />
+        <h4>고추장찌개</h4>
+        <p>6,000원</p>
+      </div>
+        <div class="menu-item">
+        <img src="assets/food4.jpg" alt="짜파게티" />
+        <h4>짜파게티</h4>
+        <p>5,000원</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food6.jpg" alt="계란찜" />
+        <h4>계란찜</h4>
+        <p>4,000원</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food5.jpg" alt="볶음밥" />
+        <h4>볶음밥</h4>
+        <p>4,000원</p>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food2.jpg" alt="공기밥" />
+        <h4>공기밥</h4>
+        <p>1,000원</p>
+      </div>
+    </div>
   </section>
-  <section id="contact">
-    <h2>가맹문의</h2>
-    <p>지금 바로 창업 문의하세요. 최고의 맛과 성공을 함께 나눌 수 있습니다.</p>
+
+  <section class="section" id="contact">
+    <h3>가맹 문의</h3>
+    <p>
+      가맹을 원하시는 분은 이메일 <strong>choigozippd@naver.com</strong> 또는
+      아래 양식을 통해 연락해주세요.
+    </p>
+    <!-- 추후 JS 연동 또는 Formspree 연결 가능 -->
   </section>
+
   <footer>
-    <p>&copy; 2025 최고집. All rights reserved.</p>
+    <p>© 2025 최고집. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
