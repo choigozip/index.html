@@ -15,21 +15,18 @@ html {
 header {
   background-color: #111;
   color: white;
-  padding: 40px 0;
+  padding: 20px 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo a {
+.logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  text-decoration: none;
-  color: inherit;
 }
 
 .logo img {
@@ -44,9 +41,8 @@ header {
 
 .nav-links {
   display: flex;
-  justify-content: center;
   gap: 30px;
-  margin-top: 10px;
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -54,23 +50,6 @@ header {
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
-}
-
-.fixed-banner {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  display: none;
-}
-
-.fixed-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.fixed-banner.show {
-  display: block;
 }
 
 .hero {
@@ -81,7 +60,8 @@ header {
 
 .hero img {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -96,7 +76,8 @@ header {
 
 .hero-text {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
@@ -104,23 +85,24 @@ header {
 
 .hero-text-inner {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px 40px;
-  border-radius: 12px;
+  padding: 20px 30px;
+  border-radius: 8px;
   display: inline-block;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent }
-}
-
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .typing-line {
@@ -140,6 +122,17 @@ header {
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   animation-delay: 2.7s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section {
@@ -168,9 +161,10 @@ header {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
 }
+
 .menu-item:hover {
   transform: translateY(-5px);
 }
@@ -210,7 +204,7 @@ header {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .branch-item h4 {
@@ -251,5 +245,9 @@ footer {
 }
 
 .hero.hide {
+  display: none;
+}
+
+.section.hidden {
   display: none;
 }
