@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>최고집 - 냉동삼겹살 전문점</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1 class="logo">최고집</h1>
-    <nav class="navbar">
-      <button class="toggle-button" aria-label="메뉴 열기">
-        ☰
-      </button>
-      <div class="nav-links">
-        <a href="#about">소개</a>
-        <a href="#menu">메뉴</a>
-        <a href="#contact">문의</a>
-      </div>
+    <div class="logo">최고집</div>
+    <button class="menu-toggle" aria-label="모바일 메뉴 열기">☰</button>
+    <nav class="nav-links">
+      <a href="#about">소개</a>
+      <a href="#menu">메뉴</a>
+      <a href="#contact">문의</a>
     </nav>
   </header>
 
@@ -29,7 +25,8 @@
   <section class="section" id="about">
     <h3>브랜드 소개</h3>
     <p>
-      최고집은 정직한 재료와 고집스러운 손맛으로 한 끼를 특별하게 만드는 냉동삼겹살 전문점입니다. 급속 냉동 기술로 신선도를 유지하고, 누구나 부담 없이 즐길 수 있도록 합리적인 가격을 유지합니다.
+      최고집은 정직한 재료와 고집스러운 손맛으로 한 끼를 특별하게 만드는 냉동삼겹살 전문점입니다.
+      급속 냉동 기술로 신선도를 유지하고, 누구나 부담 없이 즐길 수 있도록 합리적인 가격을 유지합니다.
     </p>
   </section>
 
@@ -37,37 +34,37 @@
     <h3>메뉴</h3>
     <div class="menu-grid">
       <div class="menu-item">
-        <img src="assets/food8.jpg" alt="냉동삼겹살">
+        <img src="assets/food8.jpg" alt="냉동삼겹살" />
         <h4>냉동삼겹살</h4>
         <p>12,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food7.jpg" alt="돼지껍데기">
+        <img src="assets/food7.jpg" alt="돼지껍데기" />
         <h4>돼지껍데기</h4>
         <p>10,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food3.jpg" alt="고추장찌개">
+        <img src="assets/food3.jpg" alt="고추장찌개" />
         <h4>고추장찌개</h4>
         <p>6,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food4.jpg" alt="짜파게티">
+        <img src="assets/food4.jpg" alt="짜파게티" />
         <h4>짜파게티</h4>
         <p>5,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food6.jpg" alt="계란찜">
+        <img src="assets/food6.jpg" alt="계란찜" />
         <h4>계란찜</h4>
         <p>4,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food5.jpg" alt="볶음밥">
+        <img src="assets/food5.jpg" alt="볶음밥" />
         <h4>볶음밥</h4>
         <p>4,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food2.jpg" alt="공기밥">
+        <img src="assets/food2.jpg" alt="공기밥" />
         <h4>공기밥</h4>
         <p>1,000원</p>
       </div>
@@ -84,14 +81,14 @@
   </section>
 
   <footer>
-    <p>© 2020 최고집. All Rights Reserved.</p>
+    <p>© 2025 최고집. All Rights Reserved.</p>
   </footer>
 
   <script>
-    const toggleButton = document.querySelector('.toggle-button');
-    const navLinks = document.querySelector('.nav-links');
-    toggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
     });
   </script>
 </body>
