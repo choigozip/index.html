@@ -4,25 +4,28 @@ body {
   font-family: 'GmarketSans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  color: #111;
+  background-color: #fafafa;
+  color: #222;
+  scroll-behavior: smooth;
 }
 
 header {
+  background-color: #111;
+  color: white;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #111;
-  color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .menu-toggle {
@@ -38,19 +41,64 @@ header {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #e53935;
 }
 
+/* 슬라이드 hero 영역 */
 .hero {
-  background-color: #222;
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
+.hero-text h2 {
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+.hero-text p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* 공통 섹션 */
 .section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-top: 60px;
 }
 
 .section h3 {
@@ -61,6 +109,7 @@ header {
   padding-bottom: 5px;
 }
 
+/* 메뉴 */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -74,7 +123,6 @@ header {
 
 .menu-item img {
   width: 100%;
-  height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -90,6 +138,12 @@ header {
   font-weight: bold;
 }
 
+/* 숨김 클래스 */
+.hidden {
+  display: none;
+}
+
+/* 푸터 */
 footer {
   background-color: #111;
   color: #fff;
@@ -98,6 +152,7 @@ footer {
   font-size: 14px;
 }
 
+/* 반응형 메뉴 */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
