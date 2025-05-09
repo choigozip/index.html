@@ -7,28 +7,42 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- 상단 로고 & 메뉴 -->
   <header>
-    <div class="logo">최고집</div>
-    <button class="menu-toggle" aria-label="모바일 메뉴 열기">☰</button>
+    <div class="logo">
+      <a href="#top" class="logo-link">
+        <img src="assets/logo.png" alt="최고집 로고" />
+        <span class="logo-text">최고집</span>
+      </a>
+    </div>
     <nav class="nav-links">
       <a href="#about">소개</a>
       <a href="#menu">메뉴</a>
       <a href="#contact">문의</a>
+      <a href="#branches">지점안내</a>
     </nav>
   </header>
 
-  <!-- ✅ 첫 화면 슬라이드 -->
-  <section class="hero">
-    <img src="assets/slide1.jpg" class="active" alt="slide1" />
-    <img src="assets/slide2.jpg" alt="slide2" />
-    <img src="assets/slide3.jpg" alt="slide3" />
+  <!-- 고정 배너 이미지 -->
+  <div class="fixed-banner hidden" id="fixedBanner">
+    <img src="assets/optimized_banner_dark_tile.png" alt="상단 배너 이미지" />
+  </div>
+
+  <!-- 첫 화면 슬라이드 -->
+  <section class="hero" id="top">
+    <img src="assets/slide1.jpg" class="active" alt="슬라이드1" />
+    <img src="assets/slide2.jpg" alt="슬라이드2" />
+    <img src="assets/slide3.jpg" alt="슬라이드3" />
     <div class="hero-text">
-      <h2>정직한 재료, 합리적인 가격</h2>
-      <p>냉동삼겹살의 진수, 지금 만나보세요!</p>
+      <div class="hero-text-inner">
+        <h2 class="typing-line">정직한 재료, 합리적인 가격</h2>
+        <p class="fade-line">냉동삼겹살의 진수, 지금 만나보세요!</p>
+      </div>
     </div>
   </section>
 
-  <!-- ✅ 소개 섹션 (초기 숨김) -->
+  <!-- 소개 -->
   <section class="section hidden" id="about">
     <h3>브랜드 소개</h3>
     <p>
@@ -37,48 +51,110 @@
     </p>
   </section>
 
-  <!-- ✅ 메뉴 섹션 (초기 숨김) -->
+  <!-- 메뉴 -->
   <section class="section hidden" id="menu">
     <h3>메뉴</h3>
     <div class="menu-grid">
+
       <div class="menu-item">
         <img src="assets/food1.jpg" alt="냉동삼겹살" />
         <h4>냉동삼겹살</h4>
-        <p>12,000원</p>
+        <p>두툼하고 고소한 정통 냉동삼겹살</p>
+        <span class="price">12,000원</span>
       </div>
       <div class="menu-item">
         <img src="assets/food2.jpg" alt="돼지껍데기" />
         <h4>돼지껍데기</h4>
-        <p>10,000원</p>
+        <p>쫀득쫀득한 식감으로 입맛 자극!</p>
+        <span class="price">10,000원</span>
       </div>
-      <!-- 다른 메뉴도 동일하게 추가 -->
+      <div class="menu-item">
+        <img src="assets/food3.jpg" alt="고추장찌개" />
+        <h4>고추장찌개</h4>
+        <p>매콤 칼칼한 국물맛의 정수</p>
+        <span class="price">6,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food4.jpg" alt="짜파게티" />
+        <h4>짜파게티</h4>
+        <p>구수하고 감칠맛 나는 인기 메뉴</p>
+        <span class="price">5,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food6.jpg" alt="계란찜" />
+        <h4>계란찜</h4>
+        <p>푹신하고 부드러운 따끈한 한입</p>
+        <span class="price">4,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food5.jpg" alt="볶음밥" />
+        <h4>볶음밥</h4>
+        <p>삼겹살 먹고 마무리로 딱 좋은</p>
+        <span class="price">4,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food7.jpg" alt="공기밥" />
+        <h4>공기밥</h4>
+        <p>든든한 한끼의 기본, 깔끔한 마무리</p>
+        <span class="price">1,000원</span>
+      </div>
+
     </div>
   </section>
 
-  <!-- ✅ 문의 섹션 (초기 숨김) -->
+  <!-- 문의 -->
   <section class="section hidden" id="contact">
     <h3>가맹 문의</h3>
     <p>
       가맹을 원하시는 분은 이메일 <strong>choigozippd@naver.com</strong> 또는
       아래 양식을 통해 연락해주세요.
     </p>
-    <p>지금 바로 창업 문의하세요. 최고의 맛과 성공을 함께 나눌 수 있습니다.</p>
   </section>
 
+  <!-- 지점안내 (지도가 toggle 형식으로 나타남) -->
+  <section class="section hidden" id="branches">
+    <h3>지점안내</h3>
+    <div class="branch-grid">
+
+      <div class="branch-item">
+        <h4 class="map-toggle" data-map="gajaeul-map">가재울점</h4>
+        <p><strong>연락처:</strong> 02-2138-3323</p>
+        <p><strong>주소:</strong> 서울특별시 서대문구 가재울미래로 2, 상가102동 1층 103-1호</p>
+        <div class="map-frame" id="gajaeul-map">
+          <iframe src="https://map.naver.com/p/search/가재울미래로%202" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- 지점 더 추가 가능 -->
+
+    </div>
+  </section>
+
+  <!-- 푸터 -->
   <footer>
-    <p>© 2020 최고집. All Rights Reserved.</p>
+    <p>© 2025 최고집. All Rights Reserved.</p>
   </footer>
 
-  <!-- ✅ JavaScript 직접 삽입 -->
+  <!-- 스크립트 -->
   <script>
-    // 모바일 메뉴
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
+    // 메뉴 toggle
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.classList.remove('hidden');
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 슬라이드 숨기고 배너 보이기
+        document.querySelector('.hero').classList.add('hide');
+        document.getElementById('fixedBanner').classList.add('show');
+      });
     });
 
-    // 슬라이드
+    // 슬라이드 순환
     const slides = document.querySelectorAll('.hero img');
     let currentSlide = 0;
     setInterval(() => {
@@ -87,21 +163,20 @@
       slides[currentSlide].classList.add('active');
     }, 4000);
 
-    // 메뉴 클릭 시 해당 섹션 보이기
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-        const target = document.querySelector(link.getAttribute('href'));
-        target.classList.remove('hidden');
-        target.scrollIntoView({ behavior: 'smooth' });
+    // 지점 지도 toggle
+    document.querySelectorAll('.map-toggle').forEach(el => {
+      el.addEventListener('click', () => {
+        const mapId = el.dataset.map;
+        const mapEl = document.getElementById(mapId);
+        mapEl.classList.toggle('open');
       });
     });
 
-    // 초기 섹션 숨기기
+    // 첫 로딩 시 슬라이드만 보여주고 배너 숨김
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+      document.querySelector('.hero').classList.remove('hide');
+      document.getElementById('fixedBanner').classList.remove('show');
     });
   </script>
 </body>
