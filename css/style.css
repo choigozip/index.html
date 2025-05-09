@@ -14,17 +14,17 @@ html {
 }
 
 /* header 고정 설정 */
+/* --- header & logo 부분만 --- */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 110px;         /* 이미지(70px)+上下여백(20px씩) */
+  height: 110px;
   background-color: #111;
   z-index: 1000;
 }
 
-/* 로고+텍스트 중앙 정렬 */
 .logo-link {
   position: absolute;
   left: 50%;
@@ -35,21 +35,19 @@ header {
   text-decoration: none;
 }
 
-/* 로고 크기 */
 .logo-link img {
-  height: 70px;
+  height: 70px;  /* 기존 사이즈 그대로 유지 */
 }
 
-/* 텍스트 크기(로고 높이와 동일하게) */
 .logo-text {
-  font-size: 70px;
+  font-size: 48px; /* 여기만 34px → 48px 로 살짝 키움 */
   line-height: 1;
   margin-left: 10px;
   color: white;
   font-weight: bold;
 }
 
-/* 네비게이션 메뉴 우측 정렬, 세로 중앙 */
+/* 네비게이션 메뉴 */
 .nav-links {
   position: absolute;
   right: 40px;
@@ -58,13 +56,13 @@ header {
   display: flex;
   gap: 30px;
 }
-
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
 }
+/* --- 이하 생략 --- */
 
 /* fixed-banner, hero, section 등 기존 스타일 유지 */
 .fixed-banner {
