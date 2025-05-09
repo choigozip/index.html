@@ -10,12 +10,10 @@
 
   <!-- 상단 로고 및 우측 정렬 메뉴 -->
   <header>
-    <div class="logo">
-      <a href="#top" class="logo-link">
-        <img src="assets/logo.png" alt="최고집 로고" />
-        <span class="logo-text">최고집</span>
-      </a>
-    </div>
+    <a href="#top" class="logo-link">
+      <img src="assets/logo.png" alt="최고집 로고" />
+      <span class="logo-text">최고집</span>
+    </a>
     <nav class="nav-links">
       <a href="#about">소개</a>
       <a href="#menu">메뉴</a>
@@ -53,7 +51,7 @@
   <section class="section hidden" id="menu">
     <h3>메뉴</h3>
     <div class="menu-grid">
-      <!-- (메뉴 아이템들 생략) -->
+      <!-- (메뉴 아이템들) -->
     </div>
   </section>
 
@@ -70,7 +68,7 @@
   <section class="section hidden" id="branches">
     <h3>지점안내</h3>
     <div class="branch-grid">
-      <!-- (지점 아이템들 생략) -->
+      <!-- (지점 아이템들) -->
     </div>
   </section>
 
@@ -83,15 +81,11 @@
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
-        // 모든 섹션 숨기기
         document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-        // 슬라이드 숨기고 배너 보이기
         document.querySelector('.hero').classList.add('hide');
         document.getElementById('fixedBanner').classList.add('show');
-        // 대상 섹션 보이기
         const target = document.querySelector(link.getAttribute('href'));
         target?.classList.remove('hidden');
-        // fixed header 높이만큼 아래로 스크롤
         const headerHeight = document.querySelector('header').offsetHeight;
         window.scrollTo({ top: headerHeight, behavior: 'smooth' });
       });
@@ -118,8 +112,7 @@
     // 지점 지도 토글
     document.querySelectorAll('.map-toggle').forEach(el => {
       el.addEventListener('click', () => {
-        const mapEl = document.getElementById(el.dataset.map);
-        mapEl.classList.toggle('open');
+        document.getElementById(el.dataset.map).classList.toggle('open');
       });
     });
 
