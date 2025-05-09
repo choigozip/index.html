@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>최고집 - 냉동삼겹살 전문점</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>최고집</h1>
-    <nav>
-      <a href="#about">소개</a>
-      <a href="#menu">메뉴</a>
-      <a href="#contact">문의</a>
+    <h1 class="logo">최고집</h1>
+    <nav class="navbar">
+      <button class="toggle-button" aria-label="메뉴 열기">
+        ☰
+      </button>
+      <div class="nav-links">
+        <a href="#about">소개</a>
+        <a href="#menu">메뉴</a>
+        <a href="#contact">문의</a>
+      </div>
     </nav>
   </header>
 
@@ -32,37 +37,37 @@
     <h3>메뉴</h3>
     <div class="menu-grid">
       <div class="menu-item">
-        <img src="assets/food8.jpg" alt="냉동삼겹살" />
+        <img src="assets/food8.jpg" alt="냉동삼겹살">
         <h4>냉동삼겹살</h4>
         <p>12,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food7.jpg" alt="돼지껍데기" />
+        <img src="assets/food7.jpg" alt="돼지껍데기">
         <h4>돼지껍데기</h4>
         <p>10,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food3.jpg" alt="고추장찌개" />
+        <img src="assets/food3.jpg" alt="고추장찌개">
         <h4>고추장찌개</h4>
         <p>6,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food4.jpg" alt="짜파게티" />
+        <img src="assets/food4.jpg" alt="짜파게티">
         <h4>짜파게티</h4>
         <p>5,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food6.jpg" alt="계란찜" />
+        <img src="assets/food6.jpg" alt="계란찜">
         <h4>계란찜</h4>
         <p>4,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food5.jpg" alt="볶음밥" />
+        <img src="assets/food5.jpg" alt="볶음밥">
         <h4>볶음밥</h4>
         <p>4,000원</p>
       </div>
       <div class="menu-item">
-        <img src="assets/food2.jpg" alt="공기밥" />
+        <img src="assets/food2.jpg" alt="공기밥">
         <h4>공기밥</h4>
         <p>1,000원</p>
       </div>
@@ -79,7 +84,15 @@
   </section>
 
   <footer>
-    <p>© 2025 최고집. All Rights Reserved.</p>
+    <p>© 2020 최고집. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    const toggleButton = document.querySelector('.toggle-button');
+    const navLinks = document.querySelector('.nav-links');
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
