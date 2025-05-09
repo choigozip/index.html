@@ -24,7 +24,12 @@
     </nav>
   </header>
 
-  <!-- 슬라이드 -->
+  <!-- 배너 (메뉴 클릭 시 슬라이드 대신 나올 이미지) -->
+  <div class="fixed-banner" id="fixedBanner">
+    <img src="assets/optimized_banner_dark_tile.png" alt="상단 배너 이미지" />
+  </div>
+
+  <!-- 첫 화면 슬라이드 -->
   <section class="hero" id="top">
     <img src="assets/slide1.jpg" class="active" alt="슬라이드1" />
     <img src="assets/slide2.jpg" alt="슬라이드2" />
@@ -37,7 +42,7 @@
     </div>
   </section>
 
-  <!-- 소개 -->
+  <!-- 브랜드 소개 -->
   <section class="section hidden" id="about">
     <h3>브랜드 소개</h3>
     <p>최고집은 정직한 재료와 고집스러운 손맛으로 한 끼를 특별하게 만드는 냉동삼겹살 전문점입니다.</p>
@@ -47,13 +52,48 @@
   <section class="section hidden" id="menu">
     <h3>메뉴</h3>
     <div class="menu-grid">
-      <div class="menu-item"><img src="assets/food1.jpg" alt="냉동삼겹살" /><h4>냉동삼겹살</h4><p>두툼한 삼겹살</p><span class="price">12,000원</span></div>
-      <div class="menu-item"><img src="assets/food2.jpg" alt="돼지껍데기" /><h4>돼지껍데기</h4><p>쫀득한 껍데기</p><span class="price">10,000원</span></div>
-      <div class="menu-item"><img src="assets/food3.jpg" alt="고추장찌개" /><h4>고추장찌개</h4><p>매콤한 찌개</p><span class="price">6,000원</span></div>
-      <div class="menu-item"><img src="assets/food4.jpg" alt="짜파게티" /><h4>짜파게티</h4><p>인기 사이드</p><span class="price">5,000원</span></div>
-      <div class="menu-item"><img src="assets/food6.jpg" alt="계란찜" /><h4>계란찜</h4><p>부드러운 계란찜</p><span class="price">4,000원</span></div>
-      <div class="menu-item"><img src="assets/food5.jpg" alt="볶음밥" /><h4>볶음밥</h4><p>깔끔한 마무리</p><span class="price">4,000원</span></div>
-      <div class="menu-item"><img src="assets/food7.jpg" alt="공기밥" /><h4>공기밥</h4><p>기본 밥</p><span class="price">1,000원</span></div>
+      <div class="menu-item">
+        <img src="assets/food1.jpg" alt="냉동삼겹살" />
+        <h4>냉동삼겹살</h4>
+        <p>두툼한 삼겹살</p>
+        <span class="price">12,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food2.jpg" alt="돼지껍데기" />
+        <h4>돼지껍데기</h4>
+        <p>쫀득한 껍데기</p>
+        <span class="price">10,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food3.jpg" alt="고추장찌개" />
+        <h4>고추장찌개</h4>
+        <p>매콤한 찌개</p>
+        <span class="price">6,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food4.jpg" alt="짜파게티" />
+        <h4>짜파게티</h4>
+        <p>인기 사이드</p>
+        <span class="price">5,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food6.jpg" alt="계란찜" />
+        <h4>계란찜</h4>
+        <p>부드러운 계란찜</p>
+        <span class="price">4,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food5.jpg" alt="볶음밥" />
+        <h4>볶음밥</h4>
+        <p>깔끔한 마무리</p>
+        <span class="price">4,000원</span>
+      </div>
+      <div class="menu-item">
+        <img src="assets/food7.jpg" alt="공기밥" />
+        <h4>공기밥</h4>
+        <p>기본 밥</p>
+        <span class="price">1,000원</span>
+      </div>
     </div>
   </section>
 
@@ -63,46 +103,51 @@
     <p>가맹 문의는 이메일 choigozippd@naver.com 로 보내주세요.</p>
   </section>
 
-  <!-- 지점 안내 -->
+  <!-- 지점안내 -->
   <section class="section hidden" id="branches">
     <h3>지점안내</h3>
     <div class="branch-grid">
       <div class="branch-item">
         <h4 class="map-toggle" data-map="gajaeul-map">가재울점</h4>
         <p><strong>연락처:</strong> 02-2138-3323</p>
-        <p><strong>주소:</strong> 서울특별시 서대문구 가재울미래로 2, 상가102동 1층 103-1호</p>
+        <p><strong>주소:</strong> 서울 서대문구 가재울미래로 2, 상가102동 1층 103-1호</p>
         <div class="map-frame" id="gajaeul-map">
-          <iframe src="https://map.naver.com/p/search/가재울미래로%202" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+          <iframe src="https://map.naver.com/p/search/가재울미래로%202" width="100%" height="250" frameborder="0" loading="lazy"></iframe>
         </div>
       </div>
       <div class="branch-item">
         <h4 class="map-toggle" data-map="seogyo-map">서교점</h4>
         <p><strong>연락처:</strong> 02-6032-0505</p>
-        <p><strong>주소:</strong> 서울특별시 마포구 와우산로32길 13, 1층</p>
+        <p><strong>주소:</strong> 서울 마포구 와우산로32길 13, 1층</p>
         <div class="map-frame" id="seogyo-map">
-          <iframe src="https://map.naver.com/p/search/와우산로32길%2013" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+          <iframe src="https://map.naver.com/p/search/와우산로32길%2013" width="100%" height="250" frameborder="0" loading="lazy"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <footer><p>© 2025 최고집. All Rights Reserved.</p></footer>
+  <footer>
+    <p>© 2025 최고집. All Rights Reserved.</p>
+  </footer>
 
   <script>
+    // 메뉴 클릭 시 섹션 토글
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
+        // 모두 숨기기
         document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+        // 슬라이드 숨기고 배너 보이기
         document.querySelector('.hero').classList.add('hide');
-        document.getElementById('fixedBanner')?.classList.add('show');
+        document.getElementById('fixedBanner').classList.add('show');
+        // 대상 섹션만 보이기
         const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          target.classList.remove('hidden');
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+        target?.classList.remove('hidden');
+        target?.scrollIntoView({ behavior: 'smooth' });
       });
     });
 
+    // 슬라이드 자동 순환
     const slides = document.querySelectorAll('.hero img');
     let currentSlide = 0;
     setInterval(() => {
@@ -111,16 +156,19 @@
       slides[currentSlide].classList.add('active');
     }, 4000);
 
+    // 지점 지도 토글
     document.querySelectorAll('.map-toggle').forEach(el => {
       el.addEventListener('click', () => {
-        const mapId = el.dataset.map;
-        document.getElementById(mapId)?.classList.toggle('open');
+        const mapEl = document.getElementById(el.dataset.map);
+        mapEl.classList.toggle('open');
       });
     });
 
+    // 초기 로딩: 슬라이드만 보이기
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
       document.querySelector('.hero').classList.remove('hide');
+      document.getElementById('fixedBanner').classList.remove('show');
     });
   </script>
 </body>
