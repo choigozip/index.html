@@ -1,7 +1,6 @@
 @import url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css');
 
 html {
-  /* scroll-behavior 제거 */
   scroll-behavior: auto;
 }
 
@@ -11,6 +10,7 @@ body {
   padding-top: 130px;
   background-color: #f8f8f8;
   color: #111;
+  overflow-anchor: none;
 }
 
 header {
@@ -189,6 +189,7 @@ header {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
+  scroll-margin-top: 130px;
 }
 
 .section.hidden {
