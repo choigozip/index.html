@@ -5,68 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>최고집 - 냉동삼겹살 전문점</title>
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .hamburger {
-      display: none;
-      position: absolute;
-      right: 20px;
-      top: 35px;
-      font-size: 28px;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      z-index: 1100;
-    }
-
-    .nav-links a.active {
-      border-bottom: 2px solid #e53935;
-      padding-bottom: 2px;
-    }
-
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-
-      .logo-link {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .logo-text {
-        font-size: 36px;
-        margin-left: 0;
-        margin-top: 5px;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 110px;
-        right: 0;
-        width: 100%;
-        background-color: #111;
-        padding: 20px 0;
-        z-index: 1000;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .nav-links a {
-        margin: 10px 0;
-        font-size: 18px;
-      }
-    }
-  </style>
 </head>
 <body>
-
   <header>
     <a href="#top" class="logo-link">
       <img src="assets/logo.png" alt="최고집 로고" />
@@ -158,63 +98,45 @@
   <section class="section hidden" id="branches">
     <h3>지점안내</h3>
     <div class="branch-grid">
-    <div class="branch-item">
-      <h4 class="map-toggle" data-map="gajaeul-map">가재울점</h4>
-      <p><strong>연락처:</strong> 02-2138-3323</p>
-      <p><strong>주소:</strong> 서울특별시 서대문구 가재울미래로 2, 상가102동 1층 103-1호</p>
-      <div class="map-frame" id="gajaeul-map">
-        <iframe
-          src="https://map.naver.com/p/search/가재울미래로%202"
-          width="100%" height="250" style="border:0;" loading="lazy">
-        </iframe>
+      <div class="branch-item">
+        <h4 class="map-toggle" data-map="gajaeul-map">가재울점</h4>
+        <p><strong>연락처:</strong> 02-2138-3323</p>
+        <p><strong>주소:</strong> 서울특별시 서대문구 가재울미래로 2, 상가102동 1층 103-1호</p>
+        <div class="map-frame" id="gajaeul-map">
+          <iframe src="https://map.naver.com/p/search/가재울미래로%202" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+        </div>
       </div>
-    </div>
-
-    <div class="branch-item">
-      <h4 class="map-toggle" data-map="doraeul-map">도래울점</h4>
-      <p><strong>연락처:</strong> -</p>
-      <p><strong>주소:</strong> 경기도 고양시 덕양구 의장로 144 테마타워, 108호</p>
-      <div class="map-frame" id="doraeul-map">
-        <iframe
-          src="https://map.naver.com/p/search/의장로%20144"
-          width="100%" height="250" style="border:0;" loading="lazy">
-        </iframe>
+      <div class="branch-item">
+        <h4 class="map-toggle" data-map="doraeul-map">도래울점</h4>
+        <p><strong>연락처:</strong> -</p>
+        <p><strong>주소:</strong> 경기도 고양시 덕양구 의장로 144 테마타워, 108호</p>
+        <div class="map-frame" id="doraeul-map">
+          <iframe src="https://map.naver.com/p/search/의장로%20144" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+        </div>
       </div>
-    </div>
-
-    <div class="branch-item">
-      <h4 class="map-toggle" data-map="seogyo-map">서교점</h4>
-      <p><strong>연락처:</strong> 02-6032-0505</p>
-      <p><strong>주소:</strong> 서울특별시 마포구 와우산로32길 13, 1층</p>
-      <div class="map-frame" id="seogyo-map">
-        <iframe
-          src="https://map.naver.com/p/search/와우산로32길%2013"
-          width="100%" height="250" style="border:0;" loading="lazy">
-        </iframe>
+      <div class="branch-item">
+        <h4 class="map-toggle" data-map="seogyo-map">서교점</h4>
+        <p><strong>연락처:</strong> 02-6032-0505</p>
+        <p><strong>주소:</strong> 서울특별시 마포구 와우산로32길 13, 1층</p>
+        <div class="map-frame" id="seogyo-map">
+          <iframe src="https://map.naver.com/p/search/와우산로32길%2013" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+        </div>
       </div>
-    </div>
-
-    <div class="branch-item">
-      <h4 class="map-toggle" data-map="yeomni-map">염리점</h4>
-      <p><strong>연락처:</strong> 02-6460-0033</p>
-      <p><strong>주소:</strong> 서울특별시 마포구 숭문길 6, 1층</p>
-      <div class="map-frame" id="yeomni-map">
-        <iframe
-          src="https://map.naver.com/p/search/숭문길%206"
-          width="100%" height="250" style="border:0;" loading="lazy">
-        </iframe>
+      <div class="branch-item">
+        <h4 class="map-toggle" data-map="yeomni-map">염리점</h4>
+        <p><strong>연락처:</strong> 02-6460-0033</p>
+        <p><strong>주소:</strong> 서울특별시 마포구 숭문길 6, 1층</p>
+        <div class="map-frame" id="yeomni-map">
+          <iframe src="https://map.naver.com/p/search/숭문길%206" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+        </div>
       </div>
-    </div>
-
-    <div class="branch-item">
-      <h4 class="map-toggle" data-map="poongdong-map">풍동점</h4>
-      <p><strong>연락처:</strong> 031-8073-9282</p>
-      <p><strong>주소:</strong> 경기도 고양시 일산동구 숲속마을로 50-76, B동 109호</p>
-      <div class="map-frame" id="poongdong-map">
-        <iframe
-          src="https://map.naver.com/p/search/숲속마을로%2050-76"
-          width="100%" height="250" style="border:0;" loading="lazy">
-        </iframe>
+      <div class="branch-item">
+        <h4 class="map-toggle" data-map="poongdong-map">풍동점</h4>
+        <p><strong>연락처:</strong> 031-8073-9282</p>
+        <p><strong>주소:</strong> 경기도 고양시 일산동구 숲속마을로 50-76, B동 109호</p>
+        <div class="map-frame" id="poongdong-map">
+          <iframe src="https://map.naver.com/p/search/숲속마을로%2050-76" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -223,71 +145,63 @@
     <p>© 2020 최고집. All Rights Reserved.</p>
   </footer>
 
-<script>
-  // 햄버거 버튼 클릭 시 메뉴 열고 닫기
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('show');
-  });
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('show');
+    });
 
-  // 메뉴 클릭 시 섹션 보여주기 + active 표시 + 스크롤 조정
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', e => {
+    document.querySelectorAll('.map-toggle').forEach(el => {
+      el.addEventListener('click', () => {
+        document.getElementById(el.dataset.map).classList.toggle('open');
+      });
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+
+        document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
+        link.classList.add('active');
+
+        document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+        document.querySelector('.hero').classList.add('hide');
+        document.getElementById('fixedBanner').classList.add('show');
+
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.classList.remove('hidden');
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetTop = target.offsetTop;
+          window.scrollTo({ top: targetTop - headerHeight, behavior: 'smooth' });
+        }
+
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
+
+    document.querySelector('.logo-link').addEventListener('click', e => {
       e.preventDefault();
-
-      // 모든 메뉴의 active 제거 후 현재 메뉴만 active
       document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
-      link.classList.add('active');
-
-      // 섹션 숨기기 + 타겟 섹션만 보이기
       document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-      document.querySelector('.hero').classList.add('hide');
-      document.getElementById('fixedBanner').classList.add('show');
-
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        target.classList.remove('hidden');
-
-        const headerHeight = document.querySelector('header').offsetHeight;
-        const targetTop = target.offsetTop;
-
-        window.scrollTo({
-          top: targetTop - headerHeight,
-          behavior: 'smooth'
-        });
-      }
-
-      // 모바일 메뉴 닫기
+      document.querySelector('.hero').classList.remove('hide');
+      document.getElementById('fixedBanner').classList.remove('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       document.getElementById('navLinks').classList.remove('show');
     });
-  });
 
-  // 로고 클릭 시 초기 상태 복원
-  document.querySelector('.logo-link').addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-    document.querySelector('.hero').classList.remove('hide');
-    document.getElementById('fixedBanner').classList.remove('show');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.getElementById('navLinks').classList.remove('show');
-  });
+    const slides = document.querySelectorAll('.hero img');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
 
-  // 슬라이드 자동 순환
-  const slides = document.querySelectorAll('.hero img');
-  let currentSlide = 0;
-  setInterval(() => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }, 4000);
-
-  // 처음 로딩 시: 섹션 숨기고 슬라이드만 보이기
-  window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-    document.querySelector('.hero').classList.remove('hide');
-    document.getElementById('fixedBanner').classList.remove('show');
-  });
-</script>
-
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+      document.querySelector('.hero').classList.remove('hide');
+      document.getElementById('fixedBanner').classList.remove('show');
+    });
+  </script>
 </body>
 </html>
