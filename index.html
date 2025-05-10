@@ -98,47 +98,4 @@
           link.classList.add('active');
 
           // 모든 섹션 숨기기
-          document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-          document.querySelector('.hero').classList.add('hide');
-          // fixedBanner 관련 코드 제거
-
-          // 해당 섹션만 보이게
-          const target = document.querySelector(link.getAttribute('href'));
-          if (target) {
-            target.classList.remove('hidden');
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const targetY = target.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo(0, targetY - headerHeight);
-          }
-
-          // 모바일 메뉴 닫기
-          document.getElementById('navLinks').classList.remove('show');
-        });
-      });
-
-      // 로고 클릭
-      document.querySelector('.logo-link').addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-        document.querySelector('.hero').classList.remove('hide');
-        window.scrollTo({ top: 0, behavior: 'auto' });
-        document.getElementById('navLinks').classList.remove('show');
-      });
-
-      // 슬라이드 순환
-      const slides = document.querySelectorAll('.hero img');
-      let currentSlide = 0;
-      setInterval(() => {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-      }, 4000);
-
-      // 초기 상태
-      document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-      document.querySelector('.hero').classList.remove('hide');
-    });
-  </script>
-</body>
-</html>
+          document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));<|...|>
