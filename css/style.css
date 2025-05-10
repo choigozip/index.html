@@ -343,3 +343,15 @@ footer {
     display: block;
   }
 }
+  .hero {
+    height: 70vh; /* ⬅️ 모바일에서 이미지 높이 줄이기 */
+  }
+}
+  .typing-line {
+    font-size: 28px; /* ⬅️ 기존 48px → 더 작게 */
+  }
+
+  .fade-line {
+    font-size: 16px; /* ⬅️ 문구도 약간 줄이기 */
+  }
+}
