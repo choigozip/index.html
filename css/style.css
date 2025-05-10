@@ -31,6 +31,7 @@ header {
   top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  flex-direction: row; 
   align-items: center;
   text-decoration: none;
 }
@@ -42,9 +43,10 @@ header {
 .logo-text {
   font-size: 48px; /* 여기만 34px → 48px 로 살짝 키움 */
   line-height: 1;
-  margin-left: 10px;
+  margin-left: 0.5rem;  
   color: white;
-  font-weight: bold;
+  font-weight: bold; 
+  white-space: nowrap;      /* 줄 바꿈 금지 */
 }
 
 /* 네비게이션 메뉴 */
