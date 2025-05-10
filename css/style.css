@@ -311,47 +311,41 @@ footer {
     margin-top: 5px;
   }
 
-.nav-links {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 110px;
-  right: 0;
-  width: 100%;
-  background-color: #111;
-  padding: 10px 0;     /* ⬅️ 상하 여백을 줄임 */
-  z-index: 1000;
-}
-
-.nav-links a {
-  margin: 5px 0;       /* ⬅️ 항목 간 간격을 줄임 */
-  font-size: 18px;
-}
-
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 100%;
+    background-color: #111;
+    padding: 10px 0;
+    z-index: 1000;
+  }
 
   .nav-links.show {
     display: flex;
   }
 
   .nav-links a {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 18px;
   }
 
   .hamburger {
     display: block;
   }
-}
+
   .hero {
-    height: 70vh; /* ⬅️ 모바일에서 이미지 높이 줄이기 */
+    height: 70vh;
   }
-}
+
   .typing-line {
-    font-size: 28px; /* ⬅️ 기존 48px → 더 작게 */
+    font-size: 28px;
   }
 
   .fade-line {
-    font-size: 16px; /* ⬅️ 문구도 약간 줄이기 */
+    font-size: 16px;
   }
 }
