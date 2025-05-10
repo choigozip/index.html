@@ -3,7 +3,7 @@
 body {
   font-family: 'GmarketSans', sans-serif;
   margin: 0;
-  padding-top: 110px;
+  padding-top: 130px;
   background-color: #f8f8f8;
   color: #111;
 }
@@ -17,7 +17,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 110px;
+  height: 130px;
   background-color: #111;
   z-index: 1000;
 }
@@ -99,7 +99,7 @@ header {
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -125,7 +125,7 @@ header {
 
 .hero-text {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -299,35 +299,37 @@ footer {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 130px;
+  }
+
+  header {
+    height: 130px;
+  }
+
   .logo-link {
+    top: 55%;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    top: 55%;
-    
-  }
-  
- .logo-link img {
-    height: 60px; /* 로고 이미지 높이도 약간 줄여서 안정감 */
   }
 
-  
+  .logo-link img {
+    height: 60px;
+  }
+
   .logo-text {
     font-size: 36px;
     margin-left: 0;
     margin-top: 8px;
   }
 
-    header {
-    height: 130px; /* 기존 110px → 조금 더 여유 있게 */
-  }
-}
   .nav-links {
     display: none;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 110px;
+    top: 130px;
     right: 0;
     width: 100%;
     background-color: #111;
@@ -352,15 +354,15 @@ footer {
     height: 70vh;
   }
 
+  .hero-text {
+    top: 50%;
+  }
+
   .typing-line {
     font-size: 28px;
   }
 
   .fade-line {
     font-size: 16px;
-  }
-}
- body {
-    padding-top: 130px; /* header 높이랑 맞춤 */
   }
 }
