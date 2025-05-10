@@ -78,71 +78,72 @@
   </footer>
 
 <script>
-  // 햄버거 버튼 클릭 시 메뉴 열고 닫기
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('show');
-  });
-
-  // 지점 지도 토글
-  document.querySelectorAll('.map-toggle').forEach(el => {
-    el.addEventListener('click', () => {
-      document.getElementById(el.dataset.map).classList.toggle('open');
+  window.addEventListener('DOMContentLoaded', () => {
+    // 햄버거 버튼 동작
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('show');
     });
-  });
 
-  // 메뉴 클릭 시 해당 섹션 보이기 + 스크롤 없이 점프
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', e => {
+    // 지점 지도 토글
+    document.querySelectorAll('.map-toggle').forEach(el => {
+      el.addEventListener('click', () => {
+        document.getElementById(el.dataset.map).classList.toggle('open');
+      });
+    });
+
+    // 메뉴 클릭 시 해당 섹션 보여주고 스크롤 고정
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+
+        // 메뉴 하이라이트
+        document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
+        link.classList.add('active');
+
+        // 모든 섹션 숨기고 슬라이드도 숨김
+        document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+        document.querySelector('.hero').classList.add('hide');
+        document.getElementById('fixedBanner').classList.add('show');
+
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          // display: none → block 으로 바꾸고 나서 위치 계산
+          target.classList.remove('hidden');
+
+          // 위치 강제 점프 (스크롤 제거)
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetY = target.getBoundingClientRect().top + window.scrollY;
+          setTimeout(() => {
+            window.scrollTo({ top: targetY - headerHeight, behavior: 'auto' });
+          }, 0);
+        }
+
+        // 모바일 메뉴 닫기
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
+
+    // 로고 클릭 시 첫 화면으로 이동
+    document.querySelector('.logo-link').addEventListener('click', e => {
       e.preventDefault();
-
-      // 메뉴 활성화 표시
       document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
-      link.classList.add('active');
-
-      // 전체 섹션 숨기고 슬라이드도 숨기기
       document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-      document.querySelector('.hero').classList.add('hide');
-      document.getElementById('fixedBanner').classList.add('show');
-
-      // 해당 섹션만 보이기
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        target.classList.remove('hidden');
-
-        // 정확한 위치 계산 (스크롤 없이 점프)
-        const headerHeight = document.querySelector('header').offsetHeight;
-        const scrollY = window.scrollY;
-        const targetY = target.getBoundingClientRect().top + scrollY;
-        window.scrollTo(0, targetY - headerHeight);
-      }
-
-      // 모바일 메뉴 닫기
+      document.querySelector('.hero').classList.remove('hide');
+      document.getElementById('fixedBanner').classList.remove('show');
+      window.scrollTo({ top: 0, behavior: 'auto' });
       document.getElementById('navLinks').classList.remove('show');
     });
-  });
 
-  // 로고 클릭 시 첫 화면으로 복원
-  document.querySelector('.logo-link').addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-    document.querySelector('.hero').classList.remove('hide');
-    document.getElementById('fixedBanner').classList.remove('show');
-    window.scrollTo(0, 0);
-    document.getElementById('navLinks').classList.remove('show');
-  });
+    // 슬라이드 이미지 순환
+    const slides = document.querySelectorAll('.hero img');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
 
-  // 슬라이드 이미지 순환
-  const slides = document.querySelectorAll('.hero img');
-  let currentSlide = 0;
-  setInterval(() => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }, 4000);
-
-  // 페이지 처음 로딩 시: 슬라이드만 보이기
-  window.addEventListener('DOMContentLoaded', () => {
+    // 페이지 첫 로딩 시: 슬라이드만 보이기
     document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
     document.querySelector('.hero').classList.remove('hide');
     document.getElementById('fixedBanner').classList.remove('show');
