@@ -125,13 +125,18 @@ document.querySelectorAll('.nav-links a').forEach(link => {
       document.querySelector('.hero').classList.add('hide');
       document.getElementById('fixedBanner').classList.add('show');
 
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        target.classList.remove('hidden');
-        const headerHeight = document.querySelector('header').offsetHeight;
-        const targetTop = target.offsetTop;
-        window.scrollTo(0, targetTop - headerHeight); // ✅ 여기 수정
-      }
+    const target = document.querySelector(link.getAttribute('href'));
+if (target) {
+  // 먼저 display 보이게 하고 위치를 계산
+  target.classList.remove('hidden');
+
+  const headerHeight = document.querySelector('header').offsetHeight;
+  const scrollY = window.scrollY;
+  const targetY = target.getBoundingClientRect().top + scrollY;
+
+  // 강제 점프 (스크롤 없이)
+  window.scrollTo(0, targetY - headerHeight);
+}
 
       document.getElementById('navLinks').classList.remove('show');
     });
