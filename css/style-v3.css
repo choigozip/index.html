@@ -8,10 +8,6 @@ body {
   color: #111;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 header {
   position: fixed;
   top: 0;
