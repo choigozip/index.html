@@ -238,3 +238,52 @@ footer {
   }
 }
 
+/* 햄버거 버튼 (모바일 전용) */
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* active 메뉴 강조 효과 */
+.nav-links a.active {
+  border-bottom: 2px solid #e53935;
+  padding-bottom: 2px;
+}
+
+/* 모바일 전용 */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 100%;
+    background-color: #111;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+
