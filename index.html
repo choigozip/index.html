@@ -74,28 +74,74 @@
     <p>© 2020 최고집. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      // 햄버거 버튼
-      document.getElementById('hamburger').addEventListener('click', () => {
-        document.getElementById('navLinks').classList.toggle('show');
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // 햄버거 버튼
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('show');
+    });
+
+    // 지도 토글
+    document.querySelectorAll('.map-toggle').forEach(el => {
+      el.addEventListener('click', () => {
+        document.getElementById(el.dataset.map).classList.toggle('open');
       });
+    });
 
-      // 지도 토글
-      document.querySelectorAll('.map-toggle').forEach(el => {
-        el.addEventListener('click', () => {
-          document.getElementById(el.dataset.map).classList.toggle('open');
-        });
+    // 메뉴 클릭
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault(); // 브라우저 기본 스크롤 차단
+
+        // 메뉴 강조
+        document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
+        link.classList.add('active');
+
+        // 섹션 감추기 + 슬라이드 감추기
+        document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+        document.querySelector('.hero').classList.add('hide');
+        document.getElementById('fixedBanner').classList.add('show');
+
+        // 해당 섹션만 보이게
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.classList.remove('hidden');
+
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const targetY = target.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo(0, targetY - headerHeight);
+          }
+
+        // 모바일 메뉴 닫기
+        document.getElementById('navLinks').classList.remove('show');
       });
+    });
 
-      // 메뉴 클릭
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault(); // 브라우저 기본 스크롤 차단
+    // 로고 클릭
+    document.querySelector('.logo-link').addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+      document.querySelector('.hero').classList.remove('hide');
+      document.getElementById('fixedBanner').classList.remove('show');
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      document.getElementById('navLinks').classList.remove('show');
+    });
 
-          // 메뉴 강조
-          document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
-          link.classList.add('active');
+    // 슬라이드 순환
+    const slides = document.querySelectorAll('.hero img');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
 
-          // 모든 섹션 숨기기
-          document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));<|...|>
+    // 초기 상태
+    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+    document.querySelector('.hero').classList.remove('hide');
+    document.getElementById('fixedBanner').classList.remove('show');
+  });
+</script>
+</body>
+</html>
