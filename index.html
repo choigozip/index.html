@@ -237,6 +237,77 @@
       document.querySelector('.hero').classList.remove('hide');
       document.getElementById('fixedBanner').classList.remove('show');
     });
+
+<script>
+  // 햄버거 메뉴 버튼 눌렀을 때 메뉴 보이게/숨기기
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('show');
+  });
+
+  // 메뉴 클릭 시 해당 섹션 보이게 + active 표시 + 첫 화면 숨기기
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      // 모든 메뉴에서 active 제거하고, 클릭한 메뉴에만 active 추가
+      document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
+      link.classList.add('active');
+
+      // 섹션 숨기고 클릭한 섹션만 보이기
+      document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+      document.querySelector('.hero').classList.add('hide');
+      document.getElementById('fixedBanner').classList.add('show');
+
+      const target = document.querySelector(link.getAttribute('href'));
+      target?.classList.remove('hidden');
+
+      // 스크롤 위치 조정
+      const headerHeight = document.querySelector('header').offsetHeight;
+      window.scrollTo({ top: headerHeight, behavior: 'smooth' });
+
+      // 모바일 메뉴 접기
+      document.getElementById('navLinks').classList.remove('show');
+    });
+  });
+
+  // 로고 클릭 시 첫 화면 복원
+  document.querySelector('.logo-link').addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+    document.querySelector('.hero').classList.remove('hide');
+    document.getElementById('fixedBanner').classList.remove('show');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // 모바일 메뉴 접기
+    document.getElementById('navLinks').classList.remove('show');
+  });
+
+  // 지점 지도 토글
+  document.querySelectorAll('.map-toggle').forEach(el => {
+    el.addEventListener('click', () => {
+      document.getElementById(el.dataset.map).classList.toggle('open');
+    });
+  });
+
+  // 슬라이드 자동 순환
+  const slides = document.querySelectorAll('.hero img');
+  let currentSlide = 0;
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 4000);
+
+  // 초기 로딩: 슬라이드만 보이기
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+    document.querySelector('.hero').classList.remove('hide');
+    document.getElementById('fixedBanner').classList.remove('show');
+  });
+</script>
+
+    
   </script>
 </body>
 </html>
