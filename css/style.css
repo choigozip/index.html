@@ -1,6 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css');
 
-/* fixed header 높이(110px) 만큼 여백 */
 body {
   font-family: 'GmarketSans', sans-serif;
   margin: 0;
@@ -13,8 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* header 고정 설정 */
-/* --- header & logo 부분만 --- */
 header {
   position: fixed;
   top: 0;
@@ -31,25 +28,24 @@ header {
   top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   text-decoration: none;
 }
 
 .logo-link img {
-  height: 70px;  /* 기존 사이즈 그대로 유지 */
+  height: 70px;
 }
 
 .logo-text {
-  font-size: 48px; /* 여기만 34px → 48px 로 살짝 키움 */
+  font-size: 48px;
   line-height: 1;
-  margin-left: 0.5rem;  
+  margin-left: 0.5rem;
   color: white;
-  font-weight: bold; 
-  white-space: nowrap;      /* 줄 바꿈 금지 */
+  font-weight: bold;
+  white-space: nowrap;
 }
 
-/* 네비게이션 메뉴 */
 .nav-links {
   position: absolute;
   right: 40px;
@@ -58,22 +54,43 @@ header {
   display: flex;
   gap: 30px;
 }
+
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
 }
-/* --- 이하 생략 --- */
 
-/* fixed-banner, hero, section 등 기존 스타일 유지 */
+.nav-links a.active {
+  border-bottom: 2px solid #e53935;
+  padding-bottom: 2px;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
 .fixed-banner {
   width: 100%;
   height: 200px;
   overflow: hidden;
   display: none;
 }
-.fixed-banner.show { display: block; }
+
+.fixed-banner.show {
+  display: block;
+}
+
 .fixed-banner img {
   width: 100%;
   height: 100%;
@@ -85,83 +102,149 @@ header {
   height: 100vh;
   overflow: hidden;
 }
+
 .hero img {
-  position: absolute; top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover; opacity:0;
-  transition:opacity 1s ease-in-out; z-index:1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
 }
-.hero img.active { opacity:1; }
-.hero.hide { display:none; }
+
+.hero img.active {
+  opacity: 1;
+}
+
+.hero.hide {
+  display: none;
+}
 
 .hero-text {
-  position:absolute; top:50%; left:50%;
-  transform:translate(-50%,-50%); z-index:2;
-  text-align:center;
-}
-.hero-text-inner {
-  background-color: rgba(0,0,0,0.6);
-  padding:20px 30px; border-radius:8px;
-  display:inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
 }
 
-@keyframes typing { from{width:0;} to{width:100%;} }
-@keyframes blink  {50%{border-color:transparent;}}
+.hero-text-inner {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 @keyframes fadeInUp {
-  0%{opacity:0;transform:translateY(30px);}
- 100%{opacity:1;transform:translateY(0);}
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 .typing-line {
-  font-size:48px; font-weight:bold;
-  white-space:nowrap; overflow:hidden;
-  border-right:3px solid white; width:0;
-  animation:typing 2.5s steps(30,end) forwards,
-            blink 0.75s step-end infinite;
-  color:#fff;
+  font-size: 48px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: 0;
+  animation: typing 2.5s steps(30, end) forwards, blink 0.75s step-end infinite;
+  color: #fff;
 }
+
 .fade-line {
-  font-size:20px; color:#fff; opacity:0;
-  animation:fadeInUp 1s ease-out forwards;
-  animation-delay:2.7s;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 2.7s;
 }
 
 .section {
-  padding:60px 20px; max-width:1000px; margin:auto;
-}
-.section.hidden { display:none; }
-.section h3 {
-  font-size:28px; margin-bottom:20px;
-  border-bottom:2px solid #e53935;
-  display:inline-block; padding-bottom:5px;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
+.section.hidden {
+  display: none;
+}
+
+.section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e53935;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
 .menu-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px; margin-top:30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .menu-item {
-  text-align:center; background:#fff;
-  padding:20px; border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.05);
-  transition:transform 0.3s;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
 }
-.menu-item:hover { transform:translateY(-5px); }
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
 
 .menu-item img {
-  width:100%; height:200px;
-  object-fit:cover; border-radius:8px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.menu-item h4 { margin:10px 0 5px; font-size:20px; }
-.menu-item p { font-size:14px; color:#666; }
+.menu-item h4 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #666;
+}
+
 .menu-item .price {
-  margin-top:8px; font-weight:bold;
-  color:#e53935; font-size:16px;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #e53935;
+  font-size: 16px;
 }
-
 
 .branch-grid {
   display: grid;
@@ -174,7 +257,7 @@ header {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .branch-item h4 {
@@ -184,6 +267,7 @@ header {
   cursor: pointer;
   transition: color 0.2s;
 }
+
 .branch-item h4:hover {
   color: #b71c1c;
 }
@@ -201,16 +285,18 @@ header {
   overflow: hidden;
   transition: all 0.3s ease;
 }
+
 .map-frame.open {
   display: block;
 }
-footer {
-  background-color:#111; color:#fff;
-  text-align:center; padding:20px;
-  font-size:14px;
-}
 
-.hero.hide { display: none; }
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
 
 @media (max-width: 768px) {
   .logo-link {
@@ -220,48 +306,9 @@ footer {
   }
 
   .logo-text {
-    font-size: 36px; /* 모바일에서 조금 더 작게 */
+    font-size: 36px;
     margin-left: 0;
     margin-top: 5px;
-  }
-
-  .nav-links {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 20px;
-  }
-
-  .nav-links a {
-    font-size: 16px;
-  }
-}
-
-/* 햄버거 버튼 (모바일 전용) */
-.hamburger {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 35px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-/* active 메뉴 강조 효과 */
-.nav-links a.active {
-  border-bottom: 2px solid #e53935;
-  padding-bottom: 2px;
-}
-
-/* 모바일 전용 */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
   }
 
   .nav-links {
@@ -285,5 +332,8 @@ footer {
     margin: 10px 0;
     font-size: 18px;
   }
-}
 
+  .hamburger {
+    display: block;
+  }
+}
