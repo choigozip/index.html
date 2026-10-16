@@ -59,21 +59,134 @@
     <p>지금 바로 창업 문의하세요. 최고의 맛과 성공을 함께 나눌 수 있습니다.</p>
   </section>
 
-  <section class="section hidden" id="branches">
-    <h3>지점안내</h3>
-    <div class="branch-grid">
-        <div class="branch-item"><h4 class="map-toggle" data-map="doraeul-map">본점</h4><p><strong>연락처:</strong> 031-969-9295</p><p><strong>주소:</strong> 경기도 고양시 일산동구 위시티2로 11번길11, 122호</p><div class="map-frame" id="doraeul-map"><iframe src="https://map.naver.com/p/search/%EC%B5%9C%EA%B3%A0%EC%A7%91%20%EC%8B%9D%EC%82%AC%EC%A0%90/place/1760406526?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604151135&locale=ko&svcName=map_pcv5&searchText=%EC%B5%9C%EA%B3%A0%EC%A7%91%20%EC%8B%9D%EC%82%AC%EC%A0%90" width="100%" height="250" style="border:0;" loading="lazy"></iframe></div></div>
 
-       <div class="branch-item"><h4 class="map-toggle" data-map="yeomni-map">염리점</h4><p><strong>연락처:</strong> 02-6460-0033</p><p><strong>주소:</strong> 서울특별시 마포구 숭문길 6, 1층</p><div class="map-frame" id="yeomni-map"><iframe src="https://map.naver.com/p/search/숭문길%206" width="100%" height="250" style="border:0;" loading="lazy"></iframe></div></div>
-      <div class="branch-item"><h4 class="map-toggle" data-map="poongdong-map">풍동점</h4><p><strong>연락처:</strong> 031-8073-9282</p><p><strong>주소:</strong> 경기도 고양시 일산동구 숲속마을로 50-76, B동 109호</p><div class="map-frame" id="poongdong-map"><iframe src="https://map.naver.com/p/search/숲속마을로%2050-76" width="100%" height="250" style="border:0;" loading="lazy"></iframe></div></div>
-       <div class="branch-item"><h4 class="map-toggle" data-map="seogyo-map">서교점</h4><p><strong>연락처:</strong> 02-6032-0505</p><p><strong>주소:</strong> 서울특별시 마포구 와우산로32길 13, 1층</p><div class="map-frame" id="seogyo-map"><iframe src="https://map.naver.com/p/search/와우산로32길%2013" width="100%" height="250" style="border:0;" loading="lazy"></iframe></div></div>
+<section class="section hidden" id="branches">
+  <h3>지점안내</h3>
 
-      <div class="branch-item"><h4 class="map-toggle" data-map="gajaeul-map">가재울점</h4><p><strong>연락처:</strong> 02-2138-3323</p><p><strong>주소:</strong> 서울특별시 서대문구 가재울미래로 2, 상가102동 1층 103-1호</p><div class="map-frame" id="gajaeul-map"><iframe src="https://map.naver.com/p/search/가재울미래로%202" width="100%" height="250" style="border:0;" loading="lazy"></iframe></div></div>
-      <div class="branch-item"><h4 class="map-toggle" data-map="doraeul-map">원흥점</h4><p><strong>연락처:</strong> 0507-1325-6353</p><p><strong>주소:</strong> 경기도 고양시 덕양구 의장로 144 테마타워, 108호</p><div class="map-frame" id="doraeul-map"><iframe src="https://map.naver.com/p/search/의장로%20144" width="100%" height="250" style="border:0;" loading="lazy"></iframe></div></div>
-      <div class="branch-item"><h4 class="map-toggle" data-map="haeungsin-map">행신점</h4><p><strong>연락처:</strong> 0507-1344-2376</p><p><strong>주소:</strong> 경기도 고양시 덕양구 충장로 22, 1층 105호 </p><div class="map-frame" id="doraeul-map"><iframe src="https://map.naver.com/p/entry/place/2002228560?lng=126.8344653&lat=37.6148104&placePath=%2Fhome%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202610161224%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&c=15.00,0,0,0,dh" width="100%" height="250" style="border:0;" loading="lazy"></iframe></div></div>
-        <div class="branch-item"><h4 class="map-toggle" data-map="eungam-map">응암점</h4><p><strong>연락처:</strong> 010-9299-6156</p><p><strong>주소:</strong> 서울특별시 은평구 은평로9길 14-1 1층 </p><div class="map-frame" id="doraeul-map"><iframe src="https://map.naver.com/p/entry/place/2049295286?c=15.00,0,0,0,dh&placePath=%2Fhome%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202610161228%26locale%3Dko%26svcName%3Dmap_pcv5" width="100%" height="250" style="border:0;" loading="lazy"></iframe></div></div>
+  <div class="branch-grid">
+
+    <!-- 본점 -->
+    <div class="branch-item">
+      <h4 class="map-toggle" data-map="main-map">본점</h4>
+      <p><strong>연락처:</strong> <a href="tel:0319699295">031-969-9295</a></p>
+      <p><strong>주소:</strong> 경기도 고양시 일산동구 위시티2로 11번길11, 122호</p>
+      <div class="map-frame" id="main-map">
+        <iframe
+          title="본점 위치"
+          src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EC%9C%84%EC%8B%9C%ED%8B%B02%EB%A1%9C%2011%EB%B2%88%EA%B8%B8%2011&output=embed"
+          width="100%" height="250" style="border:0;"
+          loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
     </div>
-  </section>
+
+    <!-- 염리점 -->
+    <div class="branch-item">
+      <h4 class="map-toggle" data-map="yeomni-map">염리점</h4>
+      <p><strong>연락처:</strong> <a href="tel:0264600033">02-6460-0033</a></p>
+      <p><strong>주소:</strong> 서울특별시 마포구 숭문길 6, 1층</p>
+      <div class="map-frame" id="yeomni-map">
+        <iframe
+          title="염리점 위치"
+          src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%88%AD%EB%AC%B8%EA%B8%B8%206&output=embed"
+          width="100%" height="250" style="border:0;"
+          loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- 풍동점 -->
+    <div class="branch-item">
+      <h4 class="map-toggle" data-map="poongdong-map">풍동점</h4>
+      <p><strong>연락처:</strong> <a href="tel:03180739282">031-8073-9282</a></p>
+      <p><strong>주소:</strong> 경기도 고양시 일산동구 숲속마을로 50-76, B동 109호</p>
+      <div class="map-frame" id="poongdong-map">
+        <iframe
+          title="풍동점 위치"
+          src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EB%8F%99%EA%B5%AC%20%EC%88%B2%EC%86%8D%EB%A7%88%EC%9D%84%EB%A1%9C%2050-76&output=embed"
+          width="100%" height="250" style="border:0;"
+          loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- 서교점 -->
+    <div class="branch-item">
+      <h4 class="map-toggle" data-map="seogyo-map">서교점</h4>
+      <p><strong>연락처:</strong> <a href="tel:0260320505">02-6032-0505</a></p>
+      <p><strong>주소:</strong> 서울특별시 마포구 와우산로32길 13, 1층</p>
+      <div class="map-frame" id="seogyo-map">
+        <iframe
+          title="서교점 위치"
+          src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%99%80%EC%9A%B0%EC%82%B0%EB%A1%9C32%EA%B8%B8%2013&output=embed"
+          width="100%" height="250" style="border:0;"
+          loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- 가재울점 -->
+    <div class="branch-item">
+      <h4 class="map-toggle" data-map="gajaeul-map">가재울점</h4>
+      <p><strong>연락처:</strong> <a href="tel:0221383323">02-2138-3323</a></p>
+      <p><strong>주소:</strong> 서울특별시 서대문구 가재울미래로 2, 상가102동 1층 103-1호</p>
+      <div class="map-frame" id="gajaeul-map">
+        <iframe
+          title="가재울점 위치"
+          src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%84%9C%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EA%B0%80%EC%9E%AC%EC%9A%B8%EB%AF%B8%EB%9E%98%EB%A1%9C%202&output=embed"
+          width="100%" height="250" style="border:0;"
+          loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- 원흥점 -->
+    <div class="branch-item">
+      <h4 class="map-toggle" data-map="wonheung-map">원흥점</h4>
+      <p><strong>연락처:</strong> <a href="tel:050713256353">0507-1325-6353</a></p>
+      <p><strong>주소:</strong> 경기도 고양시 덕양구 의장로 144 테마타워, 108호</p>
+      <div class="map-frame" id="wonheung-map">
+        <iframe
+          title="원흥점 위치"
+          src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EB%8D%95%EC%96%91%EA%B5%AC%20%EC%9D%98%EC%9E%A5%EB%A1%9C%20144&output=embed"
+          width="100%" height="250" style="border:0;"
+          loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- 행신점 -->
+    <div class="branch-item">
+      <h4 class="map-toggle" data-map="haeungsin-map">행신점</h4>
+      <p><strong>연락처:</strong> <a href="tel:050713442376">0507-1344-2376</a></p>
+      <p><strong>주소:</strong> 경기도 고양시 덕양구 충장로 22, 1층 105호</p>
+      <div class="map-frame" id="haeungsin-map">
+        <iframe
+          title="행신점 위치"
+          src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EB%8D%95%EC%96%91%EA%B5%AC%20%EC%B6%A9%EC%9E%A5%EB%A1%9C%2022&output=embed"
+          width="100%" height="250" style="border:0;"
+          loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- 응암점 -->
+    <div class="branch-item">
+      <h4 class="map-toggle" data-map="eungam-map">응암점</h4>
+      <p><strong>연락처:</strong> <a href="tel:01092996156">010-9299-6156</a></p>
+      <p><strong>주소:</strong> 서울특별시 은평구 은평로9길 14-1 1층</p>
+      <div class="map-frame" id="eungam-map">
+        <iframe
+          title="응암점 위치"
+          src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%9D%80%ED%8F%89%EA%B5%AC%20%EC%9D%80%ED%8F%89%EB%A1%9C9%EA%B8%B8%2014-1&output=embed"
+          width="100%" height="250" style="border:0;"
+          loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <footer>
     <p>© 2020 최고집. All Rights Reserved.</p>
